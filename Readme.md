@@ -3,16 +3,32 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1887)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# WinForms TreeList - Expression Editor and XPView
+
+In this example, the WinForms TreeList control is bound to a collection of [persistent objects](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPView). The example demonstrates how to add/create view properties ([ViewProperty](https://docs.devexpress.com/XPO/DevExpress.Xpo.ViewProperty)) on the fly using `ConditionExpressionEditorForm`.
+
+```csharp
+void OnShowExpressionEditorClick(object sender, EventArgs e) {
+    using (ExpressionEditorForm editor = 
+        new ConditionExpressionEditorForm(new TreeListDataColumnInfo(treeList1.Columns), null)) {
+        if (editor.ShowDialog() == DialogResult.OK) {
+            using (InputForm input = new InputForm()) {
+                input.ShowDialog();
+                xpView1.AddProperty(input.ColumnName, editor.Expression);
+                treeList1.PopulateColumns();
+            }
+        }
+    }
+}
+```
+
+
+## Files to Review
 
 * [Form1.cs](./CS/E1887/Form1.cs) (VB: [Form1.vb](./VB/E1887/Form1.vb))
-<!-- default file list end -->
-# An example of using the Expression Editor with the TreeList and XPView
 
 
-<p>This example demonstrates how to add ViewProperties on the fly using theConditionExpressionEditorForm.</p>
+## See Also
 
-<br/>
-
-
+* [Bind to XPO Data](https://docs.devexpress.com/WindowsForms/401033/common-features/data-binding/bind-to-XPO-data)
