@@ -6,7 +6,7 @@
 
 # WinForms TreeList - Expression Editor and XPView
 
-In this example, the WinForms TreeList control is bound to a collection of [persistent objects](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPView). The example demonstrates how to add/create view properties ([ViewProperty](https://docs.devexpress.com/XPO/DevExpress.Xpo.ViewProperty)) on the fly using `ConditionExpressionEditorForm`.
+In this example, the WinForms TreeList control is bound to a collection of [persistent objects](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPView). The example demonstrates how to add/create view properties ([ViewProperty](https://docs.devexpress.com/XPO/DevExpress.Xpo.ViewProperty)) on the fly using `ConditionExpressionEditorForm` and add coresponding calculated columns:
 
 ```csharp
 void OnShowExpressionEditorClick(object sender, EventArgs e) {
@@ -23,10 +23,22 @@ void OnShowExpressionEditorClick(object sender, EventArgs e) {
 }
 ```
 
+* Run the project.
+* Click the **Show Exxpression Editor** button.
+* Create an expression (for example, "[Quantity] * [UnitPrice]").
+* Click OK.
+* Specify the name of a new calculated column (for example, "Total").
+* Click OK.
+
 
 ## Files to Review
 
 * [Form1.cs](./CS/E1887/Form1.cs) (VB: [Form1.vb](./VB/E1887/Form1.vb))
+
+
+## Documentation
+
+* [Expression Editor](https://docs.devexpress.com/WindowsForms/6211/common-features/expressions)
 
 
 ## See Also
