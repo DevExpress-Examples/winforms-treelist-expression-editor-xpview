@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms TreeList - Expression Editor and XPView
+# WinForms TreeList - Create calculated columns (Expression Editor and XPView)
 
 In this example, the WinForms TreeList control is bound to a collection of [persistent objects](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPView). The example demonstrates how to add/create view properties ([ViewProperty](https://docs.devexpress.com/XPO/DevExpress.Xpo.ViewProperty)) on the fly using `ConditionExpressionEditorForm` and add coresponding calculated columns:
 
