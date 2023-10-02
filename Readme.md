@@ -24,7 +24,7 @@ void OnShowExpressionEditorClick(object sender, EventArgs e) {
 ```
 
 * Run the project.
-* Click the **Show Exxpression Editor** button.
+* Click the **Show Expression Editor** button.
 * Create an expression (for example, "[Quantity] * [UnitPrice]").
 * Click OK.
 * Specify the name of a new calculated column (for example, "Total").
