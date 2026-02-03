@@ -17,7 +17,7 @@ Namespace DXSample.BO
             End Get
 
             Set(ByVal value As String)
-                SetPropertyValue("Name", fName, value)
+                SetPropertyValue(Of String)("Name", fName, value)
             End Set
         End Property
 
